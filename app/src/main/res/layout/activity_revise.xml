@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Activity_Revise">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="40dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="258dp"
+            android:layout_marginRight="8dp"
+            android:background="#6ec4c4"
+            android:text="삭제" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원 ID" />
+
+        <Button
+            android:id="@+id/button1"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="wrap_content" style="?android:attr/borderlessButtonStyle"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:text="비밀번호" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="#777777"
+            android:ems="10"
+            android:inputType="numberPassword" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이름" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="좌석" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="120dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#000000"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content"
+                android:text="자유석" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="120dp"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:inputType="textPersonName"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_marginBottom="10dp"
+            android:text="등록기간" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startbtn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:text="시작날짜" />
+
+            <Button
+                android:id="@+id/endbtn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="30dp"
+                android:text="종료날짜" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/setbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="8dp"
+            android:background="#6ec4c4"
+            android:text="수정" />
+
+    </LinearLayout>
+</ScrollView>

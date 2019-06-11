@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center|top"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textSize="20pt"
+        android:gravity="center_horizontal"
+        android:paddingBottom="30pt"
+        android:paddingTop="30pt"
+        android:textColor="#000"
+        android:text="00시간 00분 00초" />
+
+    <EditText
+        android:id="@+id/in"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30pt"
+        android:textColor="#62C4C4"
+        android:shadowColor="#424242"
+        android:shadowDx="0"
+        android:textColorHint="#cccccc"
+        android:shadowDy="0"
+        android:shadowRadius="0"
+        android:hint="시간을입력하세요(초)"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="72dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#424242"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:text="계산"
+            android:textSize="10pt" />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="70dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#424242"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:text="시작"
+            android:textSize="10pt" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="67dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#424242"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:text="일시정지"
+            android:textSize="10pt" />
+
+        <Button
+            android:id="@+id/allstop"
+            android:layout_width="71dp"
+            android:layout_height="54dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#424242"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="0"
+            android:text="중지"
+            android:textSize="10pt" />
+
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:spinnerMode="dropdown"
+        android:overlapAnchor="false"
+        android:popupBackground="#6EC4C4"/>
+
+    <ImageView
+        android:id="@+id/imgView_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>
+

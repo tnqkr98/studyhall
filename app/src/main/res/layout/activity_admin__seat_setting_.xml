@@ -1,0 +1,1213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Activity_SeatSetting">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="#6EC4C4"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/backbt"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="#6EC4C4"
+                android:onClick="backbtClick"
+                app:srcCompat="@drawable/ic_complain" />
+
+            <TextView
+                android:id="@+id/seatmapname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#6EC4C4"
+                android:gravity="center_vertical"
+                android:text="   독서실 좌석 설정"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="  층 선택 :        "
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinner5"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overlapAnchor="false"
+                android:popupBackground="#6EC4C4"
+                android:spinnerMode="dropdown"
+                android:textColor="#000" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="  열람실 선택 :"
+                android:textColor="#000000"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/spinner6"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overlapAnchor="false"
+                android:popupBackground="#6EC4C4"
+                android:spinnerMode="dropdown"
+                android:textColor="#000"
+                android:textColorHint="#000000" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button13"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#6EC4C4"
+                android:onClick="addClick"
+                android:padding="5dp"
+                android:text="열람실 추가" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#6EC4C4"
+                android:onClick="deleteClick"
+                android:padding="5dp"
+                android:text="열람실 제거" />
+
+            <Button
+                android:id="@+id/serchbt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:background="#6EC4ff"
+                android:onClick="serchbt"
+                android:padding="5dp"
+                android:text="작업취소 및 갱신" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#6EC4ff"
+                android:onClick="saveSeatClick"
+                android:padding="5dp"
+                android:text="저장" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="배치 :"
+                android:textColor="#000"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/allybt"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="#000"
+                android:padding="5dp"
+                android:text="복도" />
+
+            <Button
+                android:id="@+id/seatbt"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/outborder"
+                android:onClick="fixClick"
+                android:padding="5dp"
+                android:text="좌석" />
+
+            <Button
+                android:id="@+id/doorbt"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#008"
+                android:onClick="fixClick"
+                android:padding="5dp"
+                android:text="입구" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/statebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#555555"
+            android:gravity="right"
+            android:text="현재 작업 상태"
+            android:textColor="#000" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#999999">
+
+            <HorizontalScrollView
+                android:id="@+id/maphori"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ScrollView
+                    android:id="@+id/mapverti"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center">
+
+                            <Button
+                                android:id="@+id/map0000"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0001"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0002"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0003"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0004"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0005"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0006"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0007"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0008"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0009"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0100"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0101"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0102"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0103"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0104"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0105"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0106"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0107"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0108"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0109"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0200"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0201"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0202"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0203"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0204"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0205"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0206"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0207"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0208"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0209"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0300"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0301"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0302"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0303"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0304"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0305"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0306"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0307"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0308"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0309"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0400"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0401"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0402"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0403"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0404"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0405"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0406"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0407"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0408"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0409"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0500"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0501"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0502"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0503"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0504"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0505"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0506"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0507"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0508"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0509"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0600"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0601"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0602"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0603"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0604"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0605"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0606"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0607"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0608"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0609"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0700"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0701"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0702"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0703"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0704"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0705"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0706"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0707"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0708"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0709"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0800"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0801"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0802"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0803"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0804"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0805"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0806"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0807"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0808"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0809"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:id="@+id/map0900"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0901"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0902"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0903"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0904"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0905"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0906"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0907"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0908"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/map0909"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_margin="0dp"
+                                android:background="@drawable/outborder"
+                                android:padding="0dp"
+                                android:text="1" />
+
+                        </TableRow>
+
+                    </TableLayout>
+                </ScrollView>
+            </HorizontalScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

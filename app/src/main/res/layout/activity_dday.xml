@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="1">
+
+
+
+        <TextView
+            android:id="@+id/today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30px" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:textColorHint="#cccccc"
+        android:id="@+id/edittext"
+        android:layout_width="184dp"
+        android:layout_height="61dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="30pt"
+        android:inputType="text"
+        android:privateImeOptions="defaultInputmode=korean"
+        android:shadowColor="#424242"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="0"
+        android:singleLine="true"
+        android:hint="Event"
+        android:textColor="#62C4C4"
+        android:textSize="20dp" />
+
+
+    <Button
+        android:id="@+id/입력"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginRight="118dp"
+        android:layout_toRightOf="@id/edittext"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#424242"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="0"
+        android:text="확인"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/datebutton"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-123dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@id/입력"
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#424242"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="0"
+        android:text="날짜입력"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+
+
+    <TextView
+        android:id="@+id/dday"
+        android:layout_width="180dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="520dp"
+        android:textSize="60px"
+        android:textColor="#62c4c4"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="166dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="122dp"
+        android:textSize="110px"
+        android:textColor="#EE0000"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="215dp"
+        android:layout_height="147dp"
+        android:layout_gravity="left"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="220dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:textSize="80px"
+        android:textColor="#62c4c4"/>
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="287dp"
+        android:layout_height="252dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="270dp"
+        android:src="@drawable/ca" />
+
+
+
+</RelativeLayout>

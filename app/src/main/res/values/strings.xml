@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">STUDYHALL</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_member_main">MemberMainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- 푸시알림채널 디폴트 -->
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="test">
+        <item>▼시험종류</item>
+        <item>토익LC</item>
+        <item>토익RC</item>
+        <item>토플</item>
+        <item>토익스피킹45초</item>
+        <item>토익스피킹60초</item>
+        <item>정보처리기사필기</item>
+        <item>컴퓨터활용능력시험필기</item>
+        <item>수능국어(2020)</item>
+        <item>수능수학(2020)</item>
+        <item>수능영어(2020)</item>
+        <item>수능한국사/사회/과학/직업탐구(2020)</item>
+        <item>수능제2외국어/한문(2020)</item>
+
+    </string-array>
+</resources>

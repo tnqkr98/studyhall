@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="   회원번호"
+        android:gravity="bottom"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingBottom="0dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/loginid"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:hint="ID"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#66000000" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="   비밀번호"
+        android:textStyle="bold"
+        android:gravity="bottom"
+        android:textSize="20dp"
+        android:paddingBottom="0dp"
+        android:textColor="#000000"/>
+
+    <EditText
+        android:id="@+id/loginpassword"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        android:textColor="#000000"
+        android:textColorHint="#66000000"
+        tools:text="PASSWORD" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:text=" " />
+
+    <CheckBox
+        android:id="@+id/autologincheckBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:checked="false"
+        android:textColor="#000000"
+        android:duplicateParentState="true"
+        android:text="로그인 상태 유지"
+        android:buttonTint="@color/common_google_signin_btn_text_dark_focused"/>
+
+    <Button
+        android:id="@+id/loginbt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#33ffffff"
+        android:onClick="loginClick"
+        android:text="Log In"
+        android:textColor="#6EC4C4"
+        android:textColorHint="#66000000"
+        android:textSize="25dp" />
+
+</LinearLayout>
